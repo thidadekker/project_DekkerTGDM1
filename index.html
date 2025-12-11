@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Halo-style Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .blur-bg {
+      background: radial-gradient(circle at center, rgba(0,140,255,0.5), rgba(0,0,0,0.9));
+      filter: blur(40px);
+    }
+
+    /* Optional blinking cursor */
+    #typewriter::after {
+      content: "|";
+      margin-left: 3px;
+      opacity: 1;
+      animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white min-h-screen font-sans relative overflow-x-hidden">
+
+  <!-- SOFT BLUE BACKGROUND BLUR -->
+  <div class="absolute inset-0 blur-bg w-full h-full"></div>
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 w-full z-20 flex justify-between items-center px-10 py-6 bg-black/20 backdrop-blur-xl">
+    <div class="text-white font-semibold tracking-wide">Thida Dekker Projectdocumentatie 1GDM1</div>
+    <nav>
+      <ul class="flex gap-6 text-sm opacity-90">
+        <li><a href="index.html" class="hover:text-blue-400 transition">Home</a></li>
+        <li><a href="page1.html" class="hover:text-blue-400 transition">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative z-10 flex flex-col justify-center items-center text-center h-screen px-4">
+
+    <!-- TYPEWRITER TEXT -->
+    <h1 id="typewriter" class="text-6xl md:text-7xl font-bold mb-4 tracking-tight whitespace-nowrap"></h1>
+
+    <script>
+      const text = "Lost in Tra(i)nslation.";
+      let index = 0;
+      const speed = 80;
+
+      function typeEffect() {
+        if (index < text.length) {
+          document.getElementById("typewriter").innerHTML += text.charAt(index);
+          index++;
+          setTimeout(typeEffect, speed);
+        }
+      }
+
+      window.onload = typeEffect;
+    </script>
+
+    <p class="text-gray-300 max-w-xl text-lg mb-8">Thida Dekker.</p>
+    <a href="page1.html">
+      <button class="px-6 py-3 bg-white text-black rounded-xl font-semibold hover:bg-blue-400 hover:text-black transition">
+        Get Started
+      </button>
+    </a>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="relative z-10 px-10 py-20">
+    <h2 class="text-4xl font-bold mb-10">App's that i used</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      
+      <div class="bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-white/10 hover:border-blue-400/40 transition">
+        <h3 class="text-2xl font-semibold mb-3">Visual studio code</h3>
+      </div>
+
+      <div class="bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-white/10 hover:border-blue-400/40 transition">
+        <h3 class="text-2xl font-semibold mb-3">Chat gpt</h3>
+      </div>
+
+      <div class="bg-white/5 backdrop-blur-lg p-6 rounded-2xl border border-white/10 hover:border-blue-400/40 transition">
+        <h3 class="text-2xl font-semibold mb-3">Figma</h3>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

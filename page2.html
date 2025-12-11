@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Week 1 – Dekker Thida</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Halo-stijl blur achtergrond */
+    .blur-bg {
+      background: radial-gradient(circle at center, rgba(0,140,255,0.5), rgba(0,0,0,0.9));
+      filter: blur(40px);
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    /* Blur-kaart voor content */
+    .content-card {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(20px);
+      border-radius: 2xl;
+      padding: 2rem;
+      max-width: 900px;
+      margin: 4rem auto;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+      color: #fdf9f9;
+    }
+
+    .design-image {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 15px;
+      display: block;
+      margin: 1rem auto;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .design-image:hover {
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body class="bg-black text-white min-h-screen font-sans relative overflow-x-hidden">
+
+  <!-- Halo blur background -->
+  <div class="blur-bg"></div>
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 w-full z-20 flex justify-between items-center px-10 py-6 bg-black/20 backdrop-blur-xl">
+    <div class="text-white font-semibold tracking-wide">Thida Dekker Projectdocumentatie 1GDM1</div>
+    <nav>
+      <ul class="flex gap-6 text-sm opacity-90">
+        <li><a href="index.html" class="hover:text-blue-400 transition">Home</a></li>
+        <li><a href="page1.html" class="hover:text-blue-400 transition">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MIDDEN CONTENT KAART -->
+  <main class="relative z-10">
+    <div class="content-card">
+      <h1 class="text-4xl font-bold mb-6 text-center">Week 1</h1>
+
+      <section class="mb-8">
+        <h3 class="text-2xl font-semibold mb-2">Introductie en eerste stappen in projectdocumentatie.</h3>
+        <p>In week 1 heb ik eerst intrductie gehad en uitleg over de opdracht ik ben begonnen met mijn schetsen te maken in verschillende lay outs. Ik heb versschillende dingens gevraagd aan familie en vrienden en mijn vriend hoe ik een overzichtelijk en leesbaar kan maken voor iedereen. Dit heb ik dan toegevoegd in mijn schetsen.</p>
+      </section>
+
+      <section>
+        <h3 class="text-2xl font-semibold mb-2">Schetsen</h3>
+        <div class="flex flex-col gap-4">
+          <img src="public/img/schets_1_trein.jpg" class="design-image" alt="Wireframe 1">
+          <img src="public/img/schets_2_trein.jpg" class="design-image" alt="Wireframe 2">
+          <img src="public/img/schets_3_trein.jpg" class="design-image" alt="Wireframe 3">
+        </div>
+      </section>
+    </div>
+  </main>
+
+</body>
+</html>
